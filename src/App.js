@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import Paragraph from './paragraph.js';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Hello World from all.....
-        </p>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
-      </header>
-    </div>
-  );
+    // <h1> Hello World</h1>
+<div>
+<Paragraph country="pakistan" city="sialkot"/>
+<hr/>
+<Paragraph country="KSA" city="Makkah"/>
+<hr />
+<Paragraph country="Canada" city="Victoria"/>
+<hr />
+</div>  );
 }
 
 export default App;
