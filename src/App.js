@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   let data = { title: "Waiting for Data" };
   const [todo, setTodo] = useState(data);
-  const [isData, setData] = useState(false);
+  const [isData] = useState(false);
   const [isFetching, setFetching] = useState(false);
   useEffect(() => {
 
@@ -21,7 +21,8 @@ function App() {
       setTodo(data2);
       setFetching(false);
       console.log("Data =",todo);
-    }
+      
+    };
     fetchData();
   }, [isData]);
 
