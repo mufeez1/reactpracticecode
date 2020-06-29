@@ -23,7 +23,7 @@ function App() {
       
     }
     fetchData();
-  },[]);
+  });
 
   if (isFetching) {
     return <div>Data Loading.....</div>
