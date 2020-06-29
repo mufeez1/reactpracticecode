@@ -8,21 +8,20 @@ import './App.css';
 function App() {
   let data = { title: "Waiting for Data" };
   const [todo, setTodo] = useState(data);
-  const [isData] = useState(false);
+  const [isData, setData] = useState(false);
   const [isFetching, setFetching] = useState(false);
   useEffect(() => {
 
     async function fetchData() {
-      debugger;
       setFetching(true);
       const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
       console.log("Response =", response);
       let data2 = await response.json();
       setTodo(data2);
       setFetching(false);
-      console.log("Data =",todo);
-      
-    };
+      console.log("Data =", todo);
+      setData(false)
+    }
     fetchData();
   }, [isData]);
 
@@ -32,7 +31,7 @@ function App() {
   return (
     <div >
       
-      <span>Title : {todo.title}</span>
+      <span>Title: {todo.title}</span>
     </div>
   );
 
